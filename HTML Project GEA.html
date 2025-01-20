@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GEA: Gerando Energias Alternativas</title>
+    <style>
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('bkg_01.jpg') no-repeat center center fixed; /* Background image */
+            background-size: cover; /* Ensure it covers the viewport */
+            color: #f1f1f1; /* Light text color for contrast */
+            line-height: 1.6;
+        }
+
+        header {
+            background: rgba(13, 27, 42, 0.9); /* Semi-transparent dark overlay */
+            color: #ffffff;
+            padding: 1.5rem 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3rem;
+            letter-spacing: 2px;
+        }
+
+        nav {
+            background-color: rgba(27, 38, 59, 0.9); /* Semi-transparent dark overlay */
+            display: flex;
+            justify-content: center;
+            padding: 0.7rem 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        nav a {
+            color: #f1f1f1;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        nav a:hover {
+            color: #5bc0be; /* Sky blue accent */
+            transform: scale(1.1);
+        }
+
+        section {
+            padding: 3rem;
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(13, 27, 42, 0.85); /* Semi-transparent background for readability */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero {
+            background: rgba(13, 27, 42, 0.85); /* Semi-transparent overlay */
+            color: white;
+            text-align: center;
+            padding: 6rem 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #5bc0be; /* Sky blue accent */
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: rgba(27, 38, 59, 0.9); /* Semi-transparent card background */
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            color: #f1f1f1;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        .card img {
+            max-width: 100%;
+            border-bottom: 5px solid #5bc0be; /* Sky blue accent */
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            color: #f1f1f1;
+            margin: 1rem 0;
+        }
+
+        .card p {
+            padding: 0 1rem;
+            color: #d1d1d1; /* Slightly muted text */
+        }
+
+        footer {
+            background-color: rgba(27, 38, 59, 0.9); /* Semi-transparent background */
+            color: #f1f1f1;
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: 2rem;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding: 1.5rem;
+            background: rgba(13, 27, 42, 0.85); /* Semi-transparent background */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        input, textarea {
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            outline: none;
+        }
+
+        input:focus, textarea:focus {
+            border-color: #5bc0be; /* Sky blue accent */
+        }
+
+        button {
+            background-color: #5bc0be; /* Sky blue accent */
+            color: white;
+            border: none;
+            padding: 0.8rem;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a6ab; /* Slightly darker sky blue */
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 4rem 1rem;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Gerando Energias Alternativas</h1>
+    </header>
+    <nav>
+        <a href="#about">Sobre Nós</a>
+        <a href="#projects">Projetos</a>
+        <a href="#contact">Contactos</a>
+    </nav>
+    <section class="hero">
+        <h2>A Construir um Futuro Sustentável</h2>
+        <p>Junta-te a nós para ajudares a construir painéis solares a partir de materiais reutilizados para carregar trotinetes e motos elétricas no ambiente escolar.</p>
+    </section>
+    <section id="about">
+        <h2>Sobre o GEA</h2>
+        <p>O GEA (Gerando Energias Alternativas) é um grupo formado por três estudantes do 10.º TPI, apaixonados por inovação e tecnologia sustentável. No ambiente escolar, dedicam-se ao desenvolvimento de projetos que combinam criatividade e soluções para problemas reais. O principal foco do grupo é criar um painel solar eficiente para o carregamento de scooters elétricas, promovendo uma mobilidade sustentável. Com trabalho em equipa e muita pesquisa, o GEA procura integrar conceitos de energia renovável no quotidiano. Além disso, o projeto incentiva a utilização consciente dos recursos naturais. A iniciativa também pretende sensibilizar a comunidade escolar sobre o impacto positivo da energia limpa. O GEA representa a força jovem comprometida em transformar ideias em soluções.</p>
+    </section>
+    <section id="projects">
+        <h2>Os Nossos Projetos</h2>
+        <div class="grid">
+            <div class="card">
+                <img src="https://tse3.mm.bing.net/th?id=OIP.9feAQ01VLMGlagqoLpa1wAHaD4&pid=Api&P=0&h=220" alt="Painéis Solares">
+                <h3>Design do Painel Solar</h3>
+                <p>Aprende como criamos painéis solares eficientes a partir de materiais reutilizados do dia-a-dia.</p>
+            </div>
+            <div class="card">
+                <img src="https://tse2.mm.bing.net/th?id=OIP.Yk3gVuF_x1oIF14qpDRvdAHaEk&pid=Api&P=0&h=220" alt="Motocicleta Elétrica">
+                <h3>Estações de Carregamento</h3>
+                <p>Descobre as nossas estações de carregamento alimentadas por energia solar para motos e trotinetes elétricas.</p>
+            </div>
+            <div class="card">
+                <img src="https://source.unsplash.com/300x200/?recycle,energya" alt="Materiais Reciclados">
+                <h3>Programa de Reciclagem</h3>
+                <p>O nosso compromisso com a sustentabilidade começa com iniciativas eficazes de reciclagem.</p>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Contacta-nos</h2>
+        <form id="contactForm">
+            <input type="text" placeholder="O teu Nome" required>
+            <input type="email" placeholder="O teu Email" required>
+            <textarea placeholder="A tua Mensagem" rows="5" required></textarea>
+            <button type="submit">Enviar Mensagem</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2025 GEA: Gerando Energias Alternativas. Todos os direitos reservados.</p>
+    </footer>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Obrigado por entrares em contacto! Responderemos em breve.');
+        });
+    </script>
+</body>
+</html>
